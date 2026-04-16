@@ -46,14 +46,15 @@ const exercises = [
 export default function Home() {
 
   return (
-    <>
-      {exercises.map(exercicio => {
-
-        return(
-          <Link href={'exercicio-1'}><p>{exercicio.title}</p></Link>;
-          <Link href={'exercicio-2'}><p>{exercicio.title}</p></Link>
-        )
-      })}
-    </>
+    <div className="p-4">
+      {exercises.map(exercicio => (
+        <Link href={`exercicio-${exercicio.id}`} key={exercicio.id}>
+          <div className="p-8 flex flex-col rounded-md border border-zinc-300 mb-4">
+            <h2>{exercicio.title}</h2>
+            <p>{exercicio.description}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
   );
 }
