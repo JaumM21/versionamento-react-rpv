@@ -24,7 +24,7 @@ export default function Ex01() {
             }
           `}
         >
-          {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
+          {isDark ? 'Light Mode' : 'Dark Mode'}
         </button>
 
         <div className={`mt-8 p-6 rounded-lg ${isDark ? 'bg-gray-800' : 'bg-gray-100'}`}>
